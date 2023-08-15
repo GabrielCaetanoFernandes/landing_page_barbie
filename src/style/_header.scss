@@ -1,0 +1,53 @@
+@use 'color';
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: color.$skyColorlight;
+    &__container{
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px){
+            padding: 0 12px 20px;
+        }
+    }
+    &__brand{
+        height: 95px;
+        width: 100%;
+        margin: 5px;
+        @media (max-width: 768px){
+            height: 75px;
+        }
+    }
+    &__links{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        &__link{
+            margin: 5px;
+        }
+    }
+    .button{
+        height: 50px;
+        max-width: 95px;
+        background-color: color.$buttonBg;
+        color: color.$buttonText;
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 1.8em;
+        text-decoration: none;
+
+        @media (max-width: 768px){
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+        }
+
+    }
+}
