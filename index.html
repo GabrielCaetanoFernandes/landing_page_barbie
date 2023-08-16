@@ -14,14 +14,76 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <h1>
-                <img class="header__brand" src="./src/images/logos/logo_lg.png" alt="Barbie logo">
-            </h1>
+            <picture>
+                <source media="(max-width: 768px)" srcset="./build/images/logos/logo_sm.png">
+                <img class="header__brand" src="./build/images/logos/logo_lg.png" alt="Barbie logo">
+            </picture>
             <ul class="header__links">
-                <li class="header__links__link"><a class="button" href="#sinopse">Sinopse</a></li>
+                <li class="header__links__link"><a class="button" href="#cast">Elenco</a></li>
                 <li class="header__links__link"><a class="button" href="#">Encontre sua sessão</a></li>
             </ul>
         </div>
     </header>
+    <section class="hero">
+        <div class="hero__text">
+            <h2 class="title">Sinopse:</h2>
+            <p class="text--lg">Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.</p>
+        </div>
+    </section>
+    <section id="cast" class="cast_trailer">
+        <nav class="cast_trailer__tabs">
+            <button data-tab-button="cast" class="cast_trailer__button cast_trailer__button--is-active">
+                Elenco
+            </button>
+            <button data-tab-button="trailer" class="cast_trailer__button">
+                Trailer
+            </button>
+        </nav>
+        <ul data-tab-id="cast" class="cast_trailer__tabs__tab cast_trailer__tabs__tab--is-active ">
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/barbie_cast.webp" alt="Margot Robbie">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/ken_cast.webp" alt="Ryan Gosling">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/other_ken_cast.webp" alt="Simu Liu">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/michael_cast.webp" alt="Michael Cera">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/will_cast.webp" alt="Will Ferrell">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/dua_cast.webp" alt="Dua Lipa">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/nicuti_cast.webp" alt="Nicuti Gatwa">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/america_cast.webp" alt="America Ferrera">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/issa_cast.webp" alt="Issa Rae">
+            </li>
+            <li class="cast_trailer__tabs__tab__item">
+                <img src="./build/images/cast/kate_cast.webp" alt="Kate Mckinnon">
+            </li>
+        </ul>
+        <ul data-tab-id="trailer" class="cast_trailer__tabs__tab">
+            <li class="cast_trailer__tabs__tab__item">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/pBk4NYhWNMM" title="Barbie | Main Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="text">
+                &copy; 2023 - todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+    <script src="./build/scripts/main.js"></script>
 </body>
 </html>

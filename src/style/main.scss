@@ -1,9 +1,63 @@
 @use 'color';
 @use 'header';
+@use 'hero';
+@use 'cast_trailer';
+@use 'footer';
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Slab', serif;
+}
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: color.$mainText;
+}
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: color.$mainText;
+}
+.text--lg{
+    @include text(18px);
+
+    @media (max-width: 768px){
+        @include text(15px);
+    }
+}
+.text{
+    @include text;
+
+    @media (max-width: 768px){
+        @include text(14px);
+    }
+}
+.text--sm{
+    @include text(12px);
+
+    @media (max-width: 768px){
+        @include text(11px);
+    }
+}
+.title--lg{
+    @include title(44px);
+
+    @media (max-width: 768px){
+        @include title(26px);
+    }
+}
+.title{
+    @include title;
+
+    @media (max-width: 768px){
+        @include title(24px);
+    }
+}
+.title--sm{
+    @include title(28px);
+
+    @media (max-width: 768px){
+        @include title(22px);
+    }
 }

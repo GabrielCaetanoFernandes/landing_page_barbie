@@ -19,10 +19,10 @@ function jsCompress(){
     .pipe(gulp.dest('./build/scripts'));
 }
 
-exports.default = exports.default = gulp.parallel(sassCompiler, imgCompress, jsCompress);
+exports.default = gulp.parallel(sassCompiler, imgCompress, jsCompress);
 
 exports.watch = function(){
-    gulp.watch('./src/styles/main.scss', gulp.parallel(sassCompiler))
-    gulp.watch('./src/scripts/*.js', gulp.parallel(jsCompress))
+    gulp.watch('./src/styles/*.scss', gulp.parallel(sassCompiler))
+    gulp.watch('./src/scripts/*.js', gulp.parallel(jsCompress));
 }
 //gulp.parallel(sassCompiler, imgCompress, jsCompress);

@@ -1,0 +1,11 @@
+@use 'color';
+
+.footer{
+    background-color: color.$skyColorlight;
+    &__container{
+        padding: 8px 36px;
+        text-align: center;
+        font-weight: bold;
+        color: color.$mainText;
+    }
+}
